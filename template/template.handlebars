@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Cards</title>
+  <link rel="stylesheet" href="template.css">
+</head>
+
+<body>
+
+{{#each itemSets}}
+  {{#each this.pages}}
+    <p class="filename">{{ ../name }}</p>
+    <div class="cards">
+      {{#each this}}
+      <article class="card">
+        <header>{{ text this.name }}</header>
+        {{#if this.image}}
+        <div class="image" style="background-image: url('images/{{ this.image }}');">
+          <div class="infoleft">
+            {{#if this.capacity}}<div class="capacity">{{ this.capacity }}</div>{{/if}}
+            {{ text this.infoleft }}
+            </div>
+          <div class="inforight">
+            {{ text this.inforight }}
+            </div>
+        </div>
+        {{else}}
+        <div class="image">
+          {{ text this.text }}
+        </div>
+        {{/if}}
+        <footer>
+          {{#if this.note}}<span>{{ text this.note }}</span>{{/if}}
+          {{#if this.armor }}<span>RW: {{ this.armor }}</span>{{/if}}
+          {{#if this.textCol1}}
+            <div class="cols">
+              <div>{{ this.textCol1 }}</div>
+              <div>{{ this.textCol2 }}</div>
+              <div>{{ this.textCol3 }}</div>
+            </div>
+          {{/if}}
+        </footer>
+      </article>
+    {{/each}}
+    </div>
+    <p class="filename back">{{ ../name }}</p>
+    <div class="cards back">
+      {{#each this}}
+      <article class="card back"></article>
+    {{/each}}
+    </div>
+  {{/each}}
+{{/each}}
+
+</body>
+
+</html>
+
