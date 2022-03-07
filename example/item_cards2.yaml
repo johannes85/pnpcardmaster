@@ -1,0 +1,12 @@
+- copies: 1
+  name: "MRE"
+  note:
+  image:
+  armor:
+  capacity:
+  infoleft:
+  inforight:
+  text: "Foo2"
+  textCol1:
+  textCol2:
+  textCol3:
