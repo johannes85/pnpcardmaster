@@ -11,13 +11,6 @@
     "handlebars": "^4.7.7",
     "watch": "^0.13.0"
   },
-  "pkg": {
-    "targets": [
-      "node10-linux-x64",
-      "node10-win-x64"
-    ],
-    "outputPath": "dist"
-  },
   "devDependencies": {
     "pkg": "^5.5.2"
   },
